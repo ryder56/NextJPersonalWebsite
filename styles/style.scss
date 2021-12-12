@@ -1,4 +1,68 @@
-@import "~tailwindcss/base";
-@import "~tailwindcss/components";
-@import "~tailwindcss/utilities";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+.navlink {
+    display: inline-flex;
+    width: 90%;
+    height: 4rem;
+    --tw-bg-opacity: 1;
+    background-color: rgba(49, 46, 129, var(--tw-bg-opacity));;
+    border-radius: 5px;
+    justify-content: center;
+
+    li {
+        list-style: none;
+        display: inline-flex;
+        justify-content: center;
+        margin: 1rem .5rem;
+        max-inline-size: 20%;
+
+        a {
+            background-color: grey;
+            color: darkblue;
+            font-style: normal;
+            font-size: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            white-space: normal;
+            padding: 0rem 1rem;
+        }
+    }
+
+    li:first-child {
+        justify-content: left;
+    }
+
+    li:last-child {
+        justify-content: right;
+    }
+
+    li:hover {
+        transition: .3s;
+
+        a {
+            background-color: lightblue;
+            color: black;
+        }
+    }
+}
+
+.navlink-active {
+    a {
+        background-color: lightblue !important;
+        color: black !important;
+    }
+}
+
+.full-screen {
+    max-width: 100vw;
+    min-width: 100vw;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+.img-center {
+    display: inline-flex;
+    vertical-align: middle;
+}

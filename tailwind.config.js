@@ -5,8 +5,8 @@ module.exports = {
         purgeLayersByDefault: true,
     },
     purge: [
-        './src/components/**/*.js',
-        './pages/**/*.js'],
+        './src/components/**/*.{js,jsx,ts,tsx}',
+        './pages/**/*.{js,jsx,ts,tsx}'],
     theme: {
         extend: {},
     },
