@@ -12,6 +12,7 @@ const Home: NextPage = () => {
             <div className='container mx-auto pt-5% pl-5% pr-5%'>
                 <div className='grid grid-cols-3 grid-flow-row gap-10 content-even place-items-center'>
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -26,6 +28,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -33,6 +36,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -40,6 +44,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -47,6 +52,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -54,6 +60,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -61,6 +68,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -68,6 +76,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -75,6 +84,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -82,6 +92,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -89,6 +100,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -96,6 +108,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -103,6 +116,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -110,6 +124,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'
@@ -117,6 +132,7 @@ const Home: NextPage = () => {
                         alt_text='code image'
                     />
                     <Display
+                        size='M'
                         title='This is a title'
                         href='/'
                         description='Sample description :)'

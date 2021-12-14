@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 type Props = {
+    size: 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
     title: string;
     href: string;
     description: string;
@@ -10,11 +11,29 @@ type Props = {
 }
 
 const Display = (props: Props) => {
+
+    const getContainerClassName = (): string => {
+        switch(props.size) {
+        case 'S':
+            return 'display-container--small';
+        case 'M':
+            return 'display-container--medium';
+        case 'L':
+            return 'display-container--large';
+        case 'XL':
+            return 'display-container--x-large';
+        case 'XXL':
+            return 'display-container--xx-large';
+        case 'XXXL':
+            return 'display-container--xxx-large';
+        }
+    };
+
     return (
         <div>
             <Link href={props.href}>
                 <a>
-                    <div className='display-container'>
+                    <div className={getContainerClassName()}>
                         <div className='img-container'>
                             <Image
                                 className='circular-img'
