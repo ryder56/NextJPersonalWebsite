@@ -2,12 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+    --tw-bg-opacity: 1;
+    background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
 .navlink {
     display: inline-flex;
     width: 90%;
     height: 4rem;
     --tw-bg-opacity: 1;
-    background-color: rgba(49, 46, 129, var(--tw-bg-opacity));;
+    background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
     border-radius: 5px;
     justify-content: center;
 
@@ -28,14 +33,6 @@
             white-space: normal;
             padding: 0rem 1rem;
         }
-    }
-
-    li:first-child {
-        justify-content: left;
-    }
-
-    li:last-child {
-        justify-content: right;
     }
 
     li:hover {
@@ -63,6 +60,96 @@
 }
 
 .img-center {
-    display: inline-flex;
+    display: inline-block;
     vertical-align: middle;
+    max-width: 5%;
+}
+
+.display-container {
+    min-height: 18rem;
+    max-height: 18rem;
+    min-width: 18rem;
+    max-width: 18rem;
+
+    display: block;
+
+    background-color: gray;
+
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 0px 0px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    padding-top: 10px;
+}
+
+.circular-img {
+    border-radius: 50%;
+}
+
+.img-container {
+    border-radius: 50%;
+
+    min-height: 70px;
+    max-height: 70px;
+    min-width: 70px;
+    max-width: 70px;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 100%;
+}
+
+.display-divider {
+    --tw-bg-opacity: 1;
+    background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
+
+    min-height: 2px;
+    max-height: 2px;
+
+    min-width: 90%;
+    max-width: 90%;
+
+    flex-basis: 100%;
+
+    padding: 0px 3px;
+}
+
+.header-container {
+    flex-basis: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+    a {
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+.description-container {
+    min-height: 10rem;
+    max-height: 10rem;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+    padding-left: 2px;
+    padding-right: 2px;
+
+    a {
+        text-align: center;
+    }
 }

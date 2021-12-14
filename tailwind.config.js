@@ -8,7 +8,11 @@ module.exports = {
         './src/components/**/*.{js,jsx,ts,tsx}',
         './pages/**/*.{js,jsx,ts,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            padding: {
+                '5%': '5%',
+            }
+        },
     },
     variants: {},
     plugins: [
