@@ -11,9 +11,6 @@ body {
     display: inline-flex;
     width: 90%;
     height: 4rem;
-    --tw-bg-opacity: 1;
-    background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
-    border-radius: 5px;
     justify-content: center;
 
     li {
@@ -141,18 +138,69 @@ body {
 }
 
 .img-container {
-    border-radius: 50%;
+    &--small {
+        @extend .img-container;
 
-    min-height: 70px;
-    max-height: 70px;
-    min-width: 70px;
-    max-width: 70px;
+        min-height: 85px;
+        max-height: 85px;
+        min-width: 85px;
+        max-width: 85px;
+    }
+
+    &--medium {
+        @extend .img-container;
+
+        min-height: 90px;
+        max-height: 90px;
+        min-width: 90px;
+        max-width: 90px;
+    }
+
+    &--large {
+        @extend .img-container;
+
+        min-height: 95px;
+        max-height: 95px;
+        min-width: 95px;
+        max-width: 95px;
+    }
+
+    &--x-large {
+        @extend .img-container;
+
+        min-height: 100px;
+        max-height: 100px;
+        min-width: 100px;
+        max-width: 100px;
+    }
+
+    &--xx-large {
+        @extend .img-container;
+
+        min-height: 105px;
+        max-height: 105px;
+        min-width: 105px;
+        max-width: 105px;
+    }
+
+    &--xxx-large {
+        @extend .img-container;
+
+        min-height: 110px;
+        max-height: 110px;
+        min-width: 110px;
+        max-width: 110px;
+    }
+
+    border-radius: 50%;
 
     background-color: black;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: -5%;
 
     flex-basis: 100%;
 }
@@ -180,7 +228,7 @@ body {
 
     display: flex;
 
-    a {
+    p {
         font-weight: bold;
         font-size: 24px;
     }
@@ -198,7 +246,10 @@ body {
     padding-left: 2px;
     padding-right: 2px;
 
-    a {
+    p {
+        font-size: 14px;
         text-align: center;
+        min-width: 90%;
+        max-width: 90%;
     }
 }

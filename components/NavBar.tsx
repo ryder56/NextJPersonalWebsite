@@ -9,7 +9,7 @@ const NavBar = () => {
     const router = useRouter();
 
     return (
-        <div className="container mx-auto h-16">
+        <div className="container mx-auto h-16 bg-indigo-900 rounded-md opacity-95">
             <div className='img-center'>
                 <Image
                     height={52}
@@ -24,9 +24,9 @@ const NavBar = () => {
                         Home
                     </Link>
                 </li>
-                <li className={router.asPath === '/second-page' ? 'navlink-active' : ''}>
-                    <Link href="/">
-                        Home_2
+                <li className={router.asPath === '/projects/' ? 'navlink-active' : ''}>
+                    <Link href="/projects">
+                        Projects
                     </Link>
                 </li>
             </ul>

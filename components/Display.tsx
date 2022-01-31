@@ -29,26 +29,60 @@ const Display = (props: Props) => {
         }
     };
 
+    const getImageContainerClassName = (): string => {
+        switch(props.size) {
+        case 'S':
+            return 'img-container--small';
+        case 'M':
+            return 'img-container--medium';
+        case 'L':
+            return 'img-container--large';
+        case 'XL':
+            return 'img-container--x-large';
+        case 'XXL':
+            return 'img-container--xx-large';
+        case 'XXXL':
+            return 'img-container--xxx-large';
+        }
+    };
+
+    const getImageHeightAndWidth = (): number => {
+        switch(props.size) {
+        case 'S':
+            return 81;
+        case 'M':
+            return 86;
+        case 'L':
+            return 91;
+        case 'XL':
+            return 96;
+        case 'XXL':
+            return 101;
+        case 'XXXL':
+            return 106;
+        }
+    };
+
     return (
         <div>
             <Link href={props.href}>
                 <a>
                     <div className={getContainerClassName()}>
-                        <div className='img-container'>
+                        <div className={getImageContainerClassName()}>
                             <Image
                                 className='circular-img'
-                                height={66}
-                                width={66}
+                                height={getImageHeightAndWidth()}
+                                width={getImageHeightAndWidth()}
                                 src={props.image}
                                 alt={props.alt_text}
                             />
                         </div>
-                        <div className='header-container'>
-                            <a>{props.title}</a>
+                        <div className='header-container hover:underline'>
+                            <p>{props.title}</p>
                         </div>
                         <div className='display-divider'/>
                         <div className='description-container'>
-                            <a>{props.description}</a>
+                            <p>{props.description}</p>
                         </div>
                     </div>
                 </a>
