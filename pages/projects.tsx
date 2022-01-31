@@ -19,7 +19,7 @@ const Projects: NextPage = () => {
                     they show the rapid growth I have been able to make as I have learned new technologies and techniques. <br/>
                     To see all of my projects that I have shared go see my <a
                         href="https://github.com/ryder56"
-                        className="underline hover:text-white"
+                        className="text-indigo-900 hover:underline"
                     >github</a>.
                 </h3>
             </div>
