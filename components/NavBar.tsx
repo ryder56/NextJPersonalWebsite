@@ -30,7 +30,7 @@ const NavBar = () => {
                     </Link>
                 </li>
             </ul>
-            <div className='img-center'>
+            <div className='img-center container'>
                 <Image
                     height={52}
                     width={52}
