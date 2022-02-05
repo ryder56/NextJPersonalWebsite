@@ -82,6 +82,7 @@ const Home: NextPage = () => {
             setSectionLocations();
             scrollFunction();
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isScrolled]);
 
     // on resize, change constants and recalculate locations
@@ -90,6 +91,7 @@ const Home: NextPage = () => {
             setSectionLocations();
             scrollFunction();
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isResized]);
 
     /**
