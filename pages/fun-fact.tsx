@@ -10,7 +10,7 @@ const FunFact: NextPage = () => {
     }, []);
 
     const fetchFunFact = async () => {
-        await fetch(`${window.location.host}/api/fun-fact`, {
+        await fetch('/api/fun-fact', {
             method: 'get'
         }).then( async (response) => {
             console.log(response);
