@@ -26,7 +26,7 @@ const Projects: NextPage = () => {
                 <div className='container mt-2.5% border-b-4 w-11/12 mx-auto border-gray-500 rounded'></div>
             </div>
             <div className='container mx-auto pt-5% pl-5% pr-5%'>
-                <div className='grid grid-cols-1 xl:grid-cols-1 2xl:grid-cols-3 grid-flow-row gap-10 content-even place-items-center'>
+                <div className='grid grid-cols-1 xl:grid-cols-1 2xl:grid-cols-3 grid-flow-row gap-10 content-evenly place-items-center'>
                     {prop_constants.Covid_Visualizer_Display}
                     {prop_constants.Huffman_Compression_Display}
                     {prop_constants.R6_Character_Chooser_Display}

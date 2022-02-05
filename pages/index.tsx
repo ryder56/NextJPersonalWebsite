@@ -26,7 +26,7 @@ const Home: NextPage = () => {
     const [introductionStyle, setIntroductionStyle] = useState({paddingTop: '0px'});
     const [educationStyle, setEducationStyle] = useState({paddingTop: '0px'});
     const [workExperienceStyle, setWorkExperienceStyle] = useState({paddingTop: '0px'});
-    const [projectsStyle, setProjectsStyle] = useState({paddingTop: '0px'});
+    const [technologiesStyle, setTechnologiesStyle] = useState({paddingTop: '0px'});
     const [awardsStyle, setAwardsStyle] = useState({paddingTop: '0px'});
     const [contactInfoStyle, setContactInfoStyle] = useState({paddingTop: '0px'});
 
@@ -39,8 +39,8 @@ const Home: NextPage = () => {
         'education-section-top': 0,
         'work-experience-section-bottom': 0,
         'work-experience-section-top': 0,
-        'projects-section-bottom': 0,
-        'projects-section-top': 0,
+        'technologies-section-bottom': 0,
+        'technologies-section-top': 0,
         'awards-section-bottom': 0,
         'awards-section-top': 0,
         'contact-info-section-bottom': 0,
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         'introduction': 0,
         'education': 0,
         'work-experience': 0,
-        'projects': 0,
+        'technologies': 0,
         'awards': 0,
         'contact-info': 0
     });
@@ -115,13 +115,10 @@ const Home: NextPage = () => {
     const scrollFunction = (): void => {
         const [heightPixelOffset, comparisonPixelOffset] = getPixelOffsets();
 
-        console.log(`heightPixelOffset: ${heightPixelOffset}`);
-        console.log(`comparisonPixelOffset: ${comparisonPixelOffset}`);
-
         moveContent(heightPixelOffset, comparisonPixelOffset, 'introduction');
         moveContent(heightPixelOffset, comparisonPixelOffset, 'education');
         moveContent(heightPixelOffset, comparisonPixelOffset, 'work-experience');
-        moveContent(heightPixelOffset, comparisonPixelOffset, 'projects');
+        moveContent(heightPixelOffset, comparisonPixelOffset, 'technologies');
         moveContent(heightPixelOffset, comparisonPixelOffset, 'awards');
         moveContent(heightPixelOffset, comparisonPixelOffset, 'contact-info');
         setIsScrolled(false);
@@ -136,7 +133,7 @@ const Home: NextPage = () => {
     const moveContent = (
         heightOffset: number,
         comparisonOffset: number,
-        sectionName: 'introduction' | 'education' | 'work-experience' | 'projects' | 'awards' | 'contact-info'
+        sectionName: 'introduction' | 'education' | 'work-experience' | 'technologies' | 'awards' | 'contact-info'
     ): void => {
         const div = window.document.getElementById(`${sectionName}-div`);
 
@@ -158,9 +155,7 @@ const Home: NextPage = () => {
             const newHeight = div.getBoundingClientRect().height + paddingVector;
             const componentHeight = locs[`${sectionName}-section-bottom`] - locs[`${sectionName}-section-top`] - comparisonOffset;
 
-            if (
-                newHeight < componentHeight
-            ) {
+            if (newHeight < componentHeight) {
                 switch (sectionName) {
                     case 'introduction':
                         setIntroductionStyle({paddingTop: `${paddingTop}px`});
@@ -168,8 +163,8 @@ const Home: NextPage = () => {
                         setEducationStyle({paddingTop: `${paddingTop}px`});
                     case 'work-experience':
                         setWorkExperienceStyle({paddingTop: `${paddingTop}px`});
-                    case 'projects':
-                        setProjectsStyle({paddingTop: `${paddingTop}px`});
+                    case 'technologies':
+                        setTechnologiesStyle({paddingTop: `${paddingTop}px`});
                     case 'awards':
                         setAwardsStyle({paddingTop: `${paddingTop}px`});
                     case 'contact-info':
@@ -215,16 +210,16 @@ const Home: NextPage = () => {
         const introductionSection = window.document.getElementById('introduction-section');
         const educationSection = window.document.getElementById('education-section');
         const workExperienceSection = window.document.getElementById('work-experience-section');
-        const projectsSection = window.document.getElementById('education-section');
-        const awardsSection = window.document.getElementById('education-section');
-        const contactInfoSection = window.document.getElementById('education-section');
+        const technologiesSection = window.document.getElementById('technologies-section');
+        const awardsSection = window.document.getElementById('awards-section');
+        const contactInfoSection = window.document.getElementById('contact-info-section');
         const navbar = window.document.getElementById('navbar');
 
         if (
             introductionSection &&
             educationSection &&
             workExperienceSection &&
-            projectsSection &&
+            technologiesSection &&
             awardsSection &&
             contactInfoSection &&
             navbar
@@ -237,8 +232,8 @@ const Home: NextPage = () => {
                 'education-section-top': educationSection.getBoundingClientRect().top,
                 'work-experience-section-bottom': workExperienceSection.getBoundingClientRect().height + workExperienceSection.getBoundingClientRect().top,
                 'work-experience-section-top': workExperienceSection.getBoundingClientRect().top,
-                'projects-section-bottom': projectsSection.getBoundingClientRect().height + projectsSection.getBoundingClientRect().top,
-                'projects-section-top': projectsSection.getBoundingClientRect().top,
+                'technologies-section-bottom': technologiesSection.getBoundingClientRect().height + technologiesSection.getBoundingClientRect().top,
+                'technologies-section-top': technologiesSection.getBoundingClientRect().top,
                 'awards-section-bottom': awardsSection.getBoundingClientRect().height + awardsSection.getBoundingClientRect().top,
                 'awards-section-top': awardsSection.getBoundingClientRect().top,
                 'contact-info-section-bottom': contactInfoSection.getBoundingClientRect().height + contactInfoSection.getBoundingClientRect().top,
@@ -250,7 +245,7 @@ const Home: NextPage = () => {
     return (
         <div className='container mx-auto full-screen'>
             <nav
-                className='flex mx-auto w-full fixed'
+                className='flex mx-auto w-full fixed z-50'
                 id='navbar'
             >
                 <NavBar/>
@@ -258,7 +253,7 @@ const Home: NextPage = () => {
             <div className='container mx-auto pt-5% pl-5% pr-5%'>
                 <section
                     id='introduction-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-5% text-center bg-gray-400 rounded-md h-screen'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-5% text-center bg-gray-400 rounded-md h-screen mb-2.5%'
                 >
                     {/* Introduction */}
                     <div id='introduction-div' style={introductionStyle}>
@@ -266,83 +261,97 @@ const Home: NextPage = () => {
                             Introduction
                         </h1>
                         <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
-                        <h3 className='text-xl'>
-                            Think of some text to put here (maybe do components?!?!?!?!)
-                        </h3>
+                        <div className='grid place-items-center'>
+                            {prop_constants.Self_Display}
+                        </div>
                     </div>
                 </section>
                 <section
                     id='education-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-screen'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-5% text-center bg-gray-700 rounded-md h-screen mb-2.5%'
                 >
                     {/* Education */}
                     <div id='education-div' style={educationStyle}>
                         <h1 className='text-6xl font-semibold mb-2.5%'>
-                            Introduction
+                            Education
                         </h1>
-                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
-                        <h3 className='text-xl'>
-                            Think of some text to put here (maybe do components?!?!?!?!)
-                        </h3>
+                        <div className='container mt-2.5% mb-2.5% border-b-4 w-[18rem] mx-auto border-gray-400 rounded'/>
+                        <div className='grid place-items-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16'>
+                            {prop_constants.High_School_Display}
+                            {prop_constants.College_Degree_Display}
+                        </div>
                     </div>
                 </section>
                 <section
                     id='work-experience-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-400 rounded-md h-screen'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-400 rounded-md h-screen mb-2.5%'
                 >
                     {/* Work Experience */}
                     <div id='work-experience-div' style={workExperienceStyle}>
                         <h1 className='text-6xl font-semibold mb-2.5%'>
-                            Introduction
+                            Work Experience
                         </h1>
-                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
-                        <h3 className='text-xl'>
-                            Think of some text to put here (maybe do components?!?!?!?!)
-                        </h3>
+                        <div className='container mt-2.5% mb-2.5% border-b-4 w-[30rem] mx-auto border-gray-700 rounded'/>
+                        <div className='grid place-items-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16'>
+                            {prop_constants.UASP_Display}
+                            {prop_constants.Amazon_Display}
+                        </div>
                     </div>
                 </section>
                 <section
-                    id='projects-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-screen'
+                    id='technologies-section'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-[150vh] mb-2.5%'
                 >
-                    {/* Projects */}
-                    <div id='projects-div' style={projectsStyle}>
+                    {/* Technologies */}
+                    <div id='technologies-div' style={technologiesStyle}>
                         <h1 className='text-6xl font-semibold mb-2.5%'>
-                            Introduction
+                            Programming Experience
                         </h1>
-                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
-                        <h3 className='text-xl'>
-                            Think of some text to put here (maybe do components?!?!?!?!)
-                        </h3>
+                        <div className='container mt-2.5% mb-2.5% border-b-4 w-[20rem] xl:w-[44rem] 2xl:w-[44rem] mx-auto border-gray-400 rounded'/>
+                        <div className='grid place-items-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16'>
+                            {prop_constants.Languages_Display}
+                            {prop_constants.Frameworks_And_Tools_Display}
+                        </div>
+                        <div className='container h-[4rem]'></div>
+                        <div className='grid place-items-center grid-cols-1 gap-16'>
+                            {prop_constants.AWS_Technologies_Display}
+                        </div>
                     </div>
                 </section>
                 <section
                     id='awards-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-400 rounded-md h-screen'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-400 rounded-md h-screen mb-2.5%'
                 >
                     {/* Awards */}
                     <div id='awards-div' style={awardsStyle}>
                         <h1 className='text-6xl font-semibold mb-2.5%'>
-                            Introduction
+                            Awards
                         </h1>
                         <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
-                        <h3 className='text-xl'>
-                            Think of some text to put here (maybe do components?!?!?!?!)
-                        </h3>
+                        <div className='grid place-items-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16'>
+                            {prop_constants.Best_AR_Hack_Display}
+                            {prop_constants.Deans_List_Display}
+                        </div>
                     </div>
                 </section>
                 <section
                     id='contact-info-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-screen'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-[30vh] mb-2.5%'
                 >
                     {/* Contact Info */}
                     <div id='contact-info-div' style={contactInfoStyle}>
                         <h1 className='text-6xl font-semibold mb-2.5%'>
-                            Introduction
+                            Contact Information
                         </h1>
-                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
+                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-400 rounded'/>
                         <h3 className='text-xl'>
-                            Think of some text to put here (maybe do components?!?!?!?!)
+                            Email: ryder.loves.basketball@gmail.com <br/>
+                            <a
+                                href='https://www.linkedin.com/in/ryder-roth-b414711b8/'
+                                className='text-blue-600 hover:underline'
+                            >
+                                LinkedIn
+                            </a>
                         </h3>
                     </div>
                 </section>
