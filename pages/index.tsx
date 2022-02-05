@@ -327,7 +327,7 @@ const Home: NextPage = () => {
                         <h1 className='text-6xl font-semibold mb-2.5%'>
                             Awards
                         </h1>
-                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-700 rounded'/>
+                        <div className='container mt-2.5% mb-2.5% border-b-4 w-[14rem] mx-auto border-gray-700 rounded'/>
                         <div className='grid place-items-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16'>
                             {prop_constants.Best_AR_Hack_Display}
                             {prop_constants.Deans_List_Display}
@@ -343,7 +343,7 @@ const Home: NextPage = () => {
                         <h1 className='text-6xl font-semibold mb-2.5%'>
                             Contact Information
                         </h1>
-                        <div className='container mt-2.5% mb-2.5% border-b-4 w-96 mx-auto border-gray-400 rounded'/>
+                        <div className='container mt-2.5% mb-2.5% border-b-4 w-[35rem] mx-auto border-gray-400 rounded'/>
                         <h3 className='text-xl'>
                             Email: ryder.loves.basketball@gmail.com <br/>
                             <a

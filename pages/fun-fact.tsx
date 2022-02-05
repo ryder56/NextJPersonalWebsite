@@ -2,8 +2,6 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 
-const fetchDomain = `${window.location.host}/api/fun-fact`;
-
 const FunFact: NextPage = () => {
     const [funFactText, setFunFactText] = useState('I am fetching you a fun fact...');
 
@@ -12,7 +10,7 @@ const FunFact: NextPage = () => {
     }, []);
 
     const fetchFunFact = async () => {
-        await fetch(fetchDomain, {
+        await fetch(`${window.location.host}/api/fun-fact`, {
             method: 'get'
         }).then( async (response) => {
             console.log(response);
