@@ -29,6 +29,11 @@ const NavBar = () => {
                         Projects
                     </Link>
                 </li>
+                <li className={router.asPath === '/fun-fact/' ? 'navlink-active' : ''}>
+                    <Link href='/fun-fact'>
+                        Fun Facts!
+                    </Link>
+                </li>
             </ul>
             <div className='img-center inline-flex w-5% justify-end'>
                 <Image
