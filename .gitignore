@@ -38,3 +38,7 @@ yarn-error.log*
 
 # vscode
 /.vscode
+
+# serverless files
+.serverless/
+.serverless_nextjs/
