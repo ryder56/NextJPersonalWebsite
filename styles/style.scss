@@ -1,15 +1,15 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
     --tw-bg-opacity: 1;
     background-color: rgba(185, 200, 255, var(--tw-bg-opacity));
 }
 
+
 .navlink {
     display: inline-flex;
-    width: 90%;
     height: 4rem;
     justify-content: center;
 
@@ -57,7 +57,6 @@ body {
 }
 
 .img-center {
-    display: inline-block;
     vertical-align: middle;
     max-width: 5%;
 }

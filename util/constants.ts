@@ -4,6 +4,7 @@ import r6_image from '../public/r6.jpg';
 import SVD_image from '../public/SVD.jpeg';
 import ninja_image from '../public/ninja2.png';
 
+// Constants for project display props
 export const Covid_Visualizer_Title = 'Covid AR Visualizer';
 export const Covid_Visualizer_Description =
     'This is a project that uses augmented reality (AR) to allow a map of the United States to be placed into AR ' +
@@ -50,3 +51,10 @@ export const Resume_Website_Description =
 export const Resume_Website_Tech = 'TypeScript, NextJS, Sass, Tailwind';
 export const Resume_Website_Link = 'https://github.com/ryder56/NextJPersonalWebsite';
 export const Resume_Website_Image = ninja_image;
+
+// Tailwind container size constants
+export const SM_TAILWIND_CONTAINER = 640;
+export const MD_TAILWIND_CONTAINER = 768;
+export const LG_TAILWIND_CONTAINER = 1024;
+export const XL_TAILWIND_CONTAINER = 1280;
+export const TWO_XL_TAILWIND_CONTAINER = 1536;

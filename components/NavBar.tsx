@@ -9,8 +9,8 @@ const NavBar = () => {
     const router = useRouter();
 
     return (
-        <div className="container mx-auto h-16 bg-indigo-900 rounded-md opacity-95">
-            <div className='img-center'>
+        <div className='container mx-auto h-16 bg-indigo-900 rounded-md opacity-95 z-50'>
+            <div className='img-center inline-flex w-5% justify-start'>
                 <Image
                     height={52}
                     width={52}
@@ -18,19 +18,19 @@ const NavBar = () => {
                     alt='Ninja Image'
                 />
             </div>
-            <ul className="navlink self-middle">
+            <ul className='navlink self-middle w-90%'>
                 <li className={router.asPath === '/' ? 'navlink-active' : ''}>
-                    <Link href="/">
+                    <Link href='/'>
                         Home
                     </Link>
                 </li>
                 <li className={router.asPath === '/projects/' ? 'navlink-active' : ''}>
-                    <Link href="/projects">
+                    <Link href='/projects'>
                         Projects
                     </Link>
                 </li>
             </ul>
-            <div className='img-center container'>
+            <div className='img-center inline-flex w-5% justify-end'>
                 <Image
                     height={52}
                     width={52}
