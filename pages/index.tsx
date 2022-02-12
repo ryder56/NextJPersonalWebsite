@@ -336,7 +336,7 @@ const Home: NextPage = () => {
                 </section>
                 <section
                     id='contact-info-section'
-                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-[30vh] mb-2.5%'
+                    className='container mx-auto pt-5% pl-5% pr-5% pb-25% text-center bg-gray-700 rounded-md h-[50vh] mb-2.5%'
                 >
                     {/* Contact Info */}
                     <div id='contact-info-div' style={contactInfoStyle}>

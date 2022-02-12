@@ -31,9 +31,9 @@ const FunFact: NextPage = () => {
             </nav>
             <div className='container mx-auto pt-[7.5%] pl-5% pr-5% pb-5% text-center mb-2.5%'>
                 <h1 className='text-6xl font-semibold'>
-                    HERES A FUN FACT!
+                    HERE&apos;S A FUN FACT!
                 </h1>
-                <div className='container mt-[1%] mb-2.5% border-b-4 w-[34rem] mx-auto border-gray-700 rounded'/>
+                <div className='container mt-[1%] mb-2.5% border-b-4 w-[36rem] mx-auto border-gray-700 rounded'/>
                 <h3 className='text-xl'>
                     {funFactText}
                 </h3>
